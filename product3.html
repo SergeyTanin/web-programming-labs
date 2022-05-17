@@ -3,47 +3,60 @@
     <head>
         <meta charset="utf-8"
         <title>Танин Сергей. Лабораторные по курсу "Интернет-программирование"</title>
-        <style>
-            ul.breadcrumb {
-              padding: 10px 16px;
-              list-style: none;
-              background-color: #fff;
-            }
-            ul.breadcrumb li {
-              display: inline;
-              font-size: 18px;
-            }
-            ul.breadcrumb li+li:before {
-              padding: 8px;
-              color: black;
-              content: "/\00a0";
-            }
-            ul.breadcrumb li a {
-              color: #0275d8;
-              text-decoration: none;
-            }
-            ul.breadcrumb li a:hover {
-              color: #01447e;
-              text-decoration: underline;
-            }
-            </style>
+        <link rel="stylesheet" href="main.css">
     </head>
 
     <body>
+        <header>
+            <div class="info">Телефон: 07-14-00</div>    
         <h1>Маркет. Одежда</h1>
+    </header>
+
+    <nav class="main-menu"> 
+      <ul> 
+          <li><a href="index.html">Товары</a></li> 
+          <li><a href="contacts.html">Контакты</a></li> 
+          <li><a href="delivery.html">Доставка</a></li> 
+          <li><a href="promotions.html">Акции</a></li> 
+      </ul>
+      <div class="searchbox"> 
+        <input type="search" placeholder="Поиск по товарам"> 
+        <button>&#x1F50E;</button> 
+    </div> 
+    </nav>
 
         <ul class="breadcrumb">
             <li><a href="index.html">Главная</a></li>
-            <li>Футболка</li> 
+            <li>Футболки</li> 
         </ul>
 
-        <table>
-                <img src="t-shirt.png" width="300"><img src="t-shirt2.jpg" width="400"><img src="t-shirt3.jpg" width="350"><br>
-                <tr><td>Описание:</td><td>Эти супер футболки сделают из вас профи спорта!</td></tr>
+        <main>
+            <div class="card">
+                <a>
+                    <div class="image"><img src="t-shirt.png"></div>
+                </a>
+            </div>
+            <div class="card">
+              <a>
+                  <div class="image"><img src="t-shirt2.jpg"></div>
+              </a>
+            </div>
+            <div class="card">
+              <a>
+                  <div class="image"><img src="t-shirt3.jpg"></div>
+              </a>
+            </div>
+          <table>
+            <tr><td>Описание:</td><td>Эти супер футболки сделают из вас профи спорта!</td></tr>
                 <tr><td>Размеры:</td><td>S, M, L, XL</td></tr>
                 <tr><td>Гендер:</td><td>Мужские, Женские</td></tr>
                 <tr><td>Цвет:</td><td>Черный, Белый, Синий</td></tr>
-                <tr><td>Цена:</td><td>от 3000 &#8381;</td></tr>    
-        </table>
+                <tr><td>Цена:</td><td>от 3000 &#8381;</td></tr> 
+          </table>
+        </main>
+
+        <footer> 
+          &copy; Замечательный магазин!, 2022.  
+        </footer>
     </body>
 </html>
