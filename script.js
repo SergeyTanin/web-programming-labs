@@ -1,8 +1,5 @@
-            console.log("Всем привет!!! :)");
-            console.error("Сообщение об ошибке");
-            console.warn("Сообщение-предупреждение");
 
-            function showModal(messageText, buttonText) {
+                function showModal(messageText, buttonText) {
                 let modal = document.getElementsByClassName('modal')[0];
                 modal.style.visibility = 'visible';
                 modal.style.opacity = '1';
