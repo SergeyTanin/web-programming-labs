@@ -3,8 +3,22 @@
             console.warn("Сообщение-предупреждение");
 
             function notReadyAlert() {
-                alert('Sorry, not ready yet!\nИзвините, еще не готово!');
+                // alert('Sorry, not ready yet!\nИзвините, еще не готово!');
+                let modal = document.getElementsByClassName('modal')[0];
+                modal.style.display = 'block';
+
+                document.body.style.overflow = 'hidden';
+                let overlay = document.getElementsByClassName('overlay')[0];
+                overlay.style.display = 'block';
                 return false;
+            }
+            function hideModal() {
+                let modal = document.getElementsByClassName('modal')[0];
+                modal.style.display = 'none';
+
+                document.body.style.overflow = 'auto';
+                let overlay = document.getElementsByClassName('overlay')[0];
+                overlay.style.display = 'none';
             }
 
             function search() {

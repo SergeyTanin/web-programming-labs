@@ -145,3 +145,36 @@ table td {
     margin: 0;
     padding: 0 25px;
 }
+.modal {
+    display: none;
+    width: 300px;
+    position: fixed;
+    left: 50%;
+    top: 200px;
+    margin-left: -150px;
+
+    border: 1px solid #333;
+    border-radius: 3px;
+    color: #333;
+    background-color: #e0ffe0;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 0 7px #4a0;
+}
+
+.modal .message {
+    margin-bottom: 18px;
+}
+.modal button {
+    padding: 7px;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.3;
+}
