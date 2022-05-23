@@ -145,8 +145,12 @@ table td {
     margin: 0;
     padding: 0 25px;
 }
+
 .modal {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 200ms 150ms;
+
     width: 300px;
     position: fixed;
     left: 50%;
@@ -169,12 +173,14 @@ table td {
     padding: 7px;
 }
 .overlay {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 200ms;
+
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0;
-    background-color: black;
-    opacity: 0.3;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
 }
