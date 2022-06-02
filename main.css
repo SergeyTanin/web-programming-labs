@@ -169,6 +169,9 @@ table td {
 .modal .message {
     margin-bottom: 18px;
 }
+.modal .message img {
+    max-width: 300px;
+}
 .modal button {
     padding: 7px;
 }

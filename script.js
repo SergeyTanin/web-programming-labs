@@ -87,13 +87,22 @@ function generateMenu() {
         menu.appendChild(menuItem);
     }
 }
+function showProductInfo(product) {
+    showModal(`
+        <div><img src="${product.image}"></div>
+        <div>${product.name}</div>
+        <div>${product.price} &#8381;</div>
+        <div><i>${product.info}</i></div>
+        `);
+}
+
 function generateCards() {
     let products = [
-        {image: 'RUNNING.png', name: 'Кроссовки', price: 10000},
-        {image: 'socks.png', name: 'Носки', price: 500},
-        {image: 't-shirt.png', name: 'Футболки', price: 3000},
-        {image: 'short.jpg', name: 'Шорты', price: 4500},
-        {image: 'cap.jpg', name: 'Кепки', price: 1000},
+        {image: 'RUNNING.png', name: 'Кроссовки', price: 10000, info: 'Очень удобные! Попробуйте и убедитесь'},
+        {image: 'socks.png', name: 'Носки', price: 500, info: 'Мягкие как облако'},
+        {image: 't-shirt.png', name: 'Футболки', price: 3000, info: 'Красивая и впитывающая ваш пот'},
+        {image: 'short.jpg', name: 'Шорты', price: 4500, info: 'Не стягивают в движении'},
+        {image: 'cap.jpg', name: 'Кепки', price: 1000, info: 'Защита от солнца на 100%'},
     ];
 
     let main = document.querySelector('main');
@@ -108,6 +117,9 @@ function generateCards() {
             </a>
 
             `;
+            cardDiv.querySelector('a').addEventListener('click', function() {
+                showProductInfo(product); 
+            });
         main.append(cardDiv);
     }
 }
