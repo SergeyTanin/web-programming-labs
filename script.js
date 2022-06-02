@@ -1,4 +1,10 @@
-
+let products = [
+    {image: 'RUNNING.png', name: 'Кроссовки', price: 10000, info: 'Очень удобные! Попробуйте и убедитесь'},
+    {image: 'socks.png', name: 'Носки', price: 500, info: 'Мягкие как облако'},
+    {image: 't-shirt.png', name: 'Футболки', price: 3000, info: 'Красивая и впитывающая ваш пот'},
+    {image: 'short.jpg', name: 'Шорты', price: 4500, info: 'Не стягивают в движении'},
+    {image: 'cap.jpg', name: 'Кепки', price: 1000, info: 'Защита от солнца на 100%'},
+];
                 function showModal(messageText, buttonText) {
                 let modal = document.getElementsByClassName('modal')[0];
                 modal.style.visibility = 'visible';
@@ -34,33 +40,27 @@
                 return false;
             }
 
-            function search() {
-                let name = document.getElementById('search').value;
-                let productNumber = null;
-                if (name == 'Кроссовки') {
-                    productNumber = 0;
-                } else if (name == 'Носки') {
-                    productNumber = 1;
-                } else if (name == 'Футболки') {
-                    productNumber = 2;
-                } else if (name == 'Шорты') {
-                    productNumber = 3;
-                } else if (name == 'Кепки') {
-                    productNumber = 4;      
-                } else {
-                    alert('Товар не найден');
-                }
-                
-                let cards = document.getElementsByClassName('card');
-                let card = cards[productNumber];
-                card.style.border = '1px dashed red';
-                card.style.backgroundColor = 'green';
+function search() {
+    let cards = document.getElementsByClassName('card');
+    let name = document.getElementById('search').value;
+    let nameRegExp = new RegExp(name, 'i');
+    for(let i = 0; i<products.length; i++) {
+        let product = products [i];
+        if(nameRegExp.test(product.name)) {
+            let card = cards[i];
+            card.style.border = '1px dashed red';
+            card.style.backgroundColor = 'yellow';
 
-                setTimeout(function() {
-                    card.style.border = 'none';
-                    card.style.backgroundColor = '';
-                }, 2000);
-            }
+            setTimeout(function() {
+                card.style.border = 'none';
+                card.style.backgroundColor = '';
+            }, 2000);
+
+        }
+
+    }
+}
+
 function generateMenu() {
     let menu = document.querySelector('nav.main-menu ul');
     menu.innerHTML = '';
@@ -97,13 +97,7 @@ function showProductInfo(product) {
 }
 
 function generateCards() {
-    let products = [
-        {image: 'RUNNING.png', name: 'Кроссовки', price: 10000, info: 'Очень удобные! Попробуйте и убедитесь'},
-        {image: 'socks.png', name: 'Носки', price: 500, info: 'Мягкие как облако'},
-        {image: 't-shirt.png', name: 'Футболки', price: 3000, info: 'Красивая и впитывающая ваш пот'},
-        {image: 'short.jpg', name: 'Шорты', price: 4500, info: 'Не стягивают в движении'},
-        {image: 'cap.jpg', name: 'Кепки', price: 1000, info: 'Защита от солнца на 100%'},
-    ];
+    
 
     let main = document.querySelector('main');
     for(let product of products) {
