@@ -14,6 +14,30 @@ header .info {
     font-size: 14px;
 }
 
+header .cart {
+    position:absolute;
+    right: 20px;
+}
+header .cart img {
+    width: 34px;
+    padding: 10px;
+    border: 1px solid lightgray;
+    background: white;
+    border-radius: 30%;
+}
+#product-count {
+    position:absolute;
+    top: 39px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    padding: 5px;
+    left: -9px;
+    background-color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    color: red;
+}
+
 header h1 {
     background-color: #e0ffe0;
     color:#333;
