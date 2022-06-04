@@ -26,6 +26,7 @@ header .cart img {
     border-radius: 30%;
 }
 #product-count {
+    display: none;
     position:absolute;
     top: 39px;
     border-radius: 50%;
