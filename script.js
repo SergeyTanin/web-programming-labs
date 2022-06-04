@@ -100,7 +100,8 @@ function generateCards() {
     
 
     let main = document.querySelector('main');
-    for(let product of products) {
+    for(let i = 0; i<products.length; i++) {
+        let product = products[i];
         let cardDiv = document.createElement('div');
         cardDiv.className = 'card';
         cardDiv.innerHTML = `
@@ -109,8 +110,15 @@ function generateCards() {
                 <div class="product-name">${product.name}</div>
                 <div class="price">${product.price} &#8381;</div>
             </a>
-
+            <div>
+                <input type="number" value="1" min="1">
+                <button>Купить</button>
+            </div>
             `;
+            cardDiv.querySelector('button').addEventListener('click', function(e) {
+                alert('пока в разработке');
+                return false;
+            });
             cardDiv.querySelector('a').addEventListener('click', function() {
                 showProductInfo(product); 
             });
